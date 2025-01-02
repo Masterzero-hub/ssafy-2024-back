@@ -169,3 +169,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+fly.toml
+.git/
+__pycache__/
+.envrc
+.venv/
