@@ -67,6 +67,7 @@ async def chat_endpoint(req: MessageRequest):
     response = process_query(req.message)
     
     if response is None:
+        print("제조사 식별 실패")
         # 제조사 식별 실패 시, OpenAI의 답변으로 대체하고 경고 메시지를 추가
         ai_response = openai.chat.completions.create(
             model="gpt-4o-mini",
@@ -80,6 +81,7 @@ async def chat_endpoint(req: MessageRequest):
         return {"reply": f"제조사 식별에 실패하여, OpenAI의 답변으로 대체되었으므로 오류가 있을 수 있습니다.\n\n{assistant_reply}"}
     
     # 정상적인 LLM 응답 처리
+    print("응답 완료료")
     return {"reply": response}
 
 if __name__ == "__main__":
