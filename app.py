@@ -36,7 +36,7 @@ def process_query(query):
         query (str): 사용자가 입력한 쿼리.
 
     Returns:
-        str: LLM 처리 결과.
+        str: LLM 처리 결과 또는 오류 메시지.
     """
     manufacturer = identify_manufacturer(query)
 
@@ -44,11 +44,8 @@ def process_query(query):
         filtered_retriever = get_filtered_retriever(manufacturer)
         result_docs = filtered_retriever.invoke(query)
     else:
-        retriever = vectorstore.as_retriever(
-            search_type='mmr',
-            search_kwargs={'k': 3}
-        )
-        result_docs = retriever.invoke(query)
+        # 제조사 식별 실패 시 OpenAI 답변을 사용하도록 함
+        return None
 
     chain = prompt | llm | StrOutputParser()
     response = chain.invoke({"retrieved_content": result_docs, "input": query})
@@ -68,10 +65,22 @@ async def chat_endpoint(req: MessageRequest):
     """
     # Process the query through process_query function
     response = process_query(req.message)
-
-    # Return the response as a JSON object
+    
+    if response is None:
+        # 제조사 식별 실패 시, OpenAI의 답변으로 대체하고 경고 메시지를 추가
+        ai_response = openai.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": req.message},
+            ],
+        )
+        assistant_reply = ai_response.choices[0].message.content
+        # OpenAI 답변에 제조사 식별 실패 경고 메시지 추가
+        return {"reply": f"제조사 식별에 실패하여, OpenAI의 답변으로 대체되었으므로 오류가 있을 수 있습니다.\n\n{assistant_reply}"}
+    
+    # 정상적인 LLM 응답 처리
     return {"reply": response}
-
 
 if __name__ == "__main__":
     import uvicorn
