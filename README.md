@@ -37,7 +37,6 @@
 ## 4. 사용 툴
 ## 아키텍처
 ![아키텍처](images/Frame%201.png)
-
 ### 프론트엔드: Node.js  
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)  
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -49,31 +48,18 @@
 ### 데이터베이스: Pinecone  
 ![Pinecone](https://img.shields.io/badge/Pinecone-black?style=for-the-badge&logo=pinecone&logoColor=339933)
 
-### 모델
-
-#### **LangChain**  
-![LangChain](https://img.shields.io/badge/LangChain-%23F5A623.svg?style=for-the-badge&logo=svg&logoColor=white)
-
-#### **ChatGPT**  
-![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
-
-#### **Embedding**
-- **Upstage**  
-  ![Upstage](https://img.shields.io/badge/Upstage-%23805CFB.svg?style=for-the-badge&logo=data:image/png;base64,...)
-
-#### **Retrieval**
-- **MMR (Maximum Marginal Relevance)**  
-  ![MMR](https://img.shields.io/badge/MMR-%23007BFF.svg?style=for-the-badge&logo=MMR&logoColor=white)
-
-#### 모델 테스트
-- **RAGAS**  
-  ![RAGAS](https://img.shields.io/badge/RAGAS-%23F9C23C.svg?style=for-the-badge&logo=RAGAS&logoColor=white)
+### 모델: LangChain, ChatGPT, Embedding (Upstage), Retrieval (MMR), 테스트 (RAGAS)  
+![LangChain](https://img.shields.io/badge/LangChain-%23F5A623.svg?style=for-the-badge&logo=svg&logoColor=white)  
+![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)  
+![Upstage](https://img.shields.io/badge/Upstage-%23805CFB.svg?style=for-the-badge&logo=data:image/png;base64,...)  
+![MMR](https://img.shields.io/badge/MMR-%23007BFF.svg?style=for-the-badge&logo=MMR&logoColor=white)  
+![RAGAS](https://img.shields.io/badge/RAGAS-%23F9C23C.svg?style=for-the-badge&logo=RAGAS&logoColor=white)
 
 ### 배포: AWS, Fly.io  
 ![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)  
 ![Fly.io](https://img.shields.io/badge/Fly.io-24175B?style=for-the-badge&logo=flydotio&logoColor=white)
 
-### GitHub에서 사용되는 도구들  
+### GitHub 도구  
 ![Mattermost](https://img.shields.io/badge/Mattermost-0058CC?style=for-the-badge&logo=Mattermost&logoColor=white)  
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
