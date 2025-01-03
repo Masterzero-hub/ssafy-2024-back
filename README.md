@@ -30,38 +30,47 @@
 ## 4. 사용 툴
 
 ### 프론트엔드: Node.js
-<img src="https://camo.githubusercontent.com/3358fe92e876704b4bf9965ef89ec7f7d842398c9db8bf64806b4d2211cd9a27/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d3333393933393f7374796c653d666f722d7468652d6261646765266c6f676f3d4e6f64652e6a73266c6f676f436f6c6f723d7768697465">
-<img src="https://camo.githubusercontent.com/bb609305bebe02f66a56aedbc7bb565f7a2b91e55c11dbdec7834af157ad5aa2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d4637444631453f7374796c653d666f722d7468652d6261646765266c6f676f3d5265616374266c6f676f436f6c6f723d7768697465">
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ### 백엔드: FastAPI
-<img src="https://camo.githubusercontent.com/9d770366baad027e7316fcbffeb7ae265dc9a464ad86c2bb386a30d1e8d70f7b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d3337373641423f7374796c653d666f722d7468652d6261646765266c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465">
-
-![FastAPI 로고](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 
 ### 데이터베이스: Pinecone
-![Pinecone 로고](https://pinecone.io/images/pinecone-logo.svg)
+![Pinecone](https://img.shields.io/badge/Pinecone-black?style=for-the-badge&logo=pinecone&logoColor=339933)
 
 ### 모델
-- **임베딩**: [모델명 추가]
-- **리트리버**: [모델명 추가]
 
-### 모델 테스트: RAGAS
-![RAGAS 로고](https://raw.githubusercontent.com/explodinggradients/ragas/main/docs/images/ragas-logo-light.png)
+### **LangChain**
+![LangChain](https://img.shields.io/badge/LangChain-%23F5A623.svg?style=for-the-badge&logo=svg&logoColor=white)
+
+### **ChatGPT**
+![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
+
+### **Embedding**
+- **Upstage**  
+  ![Upstage](https://img.shields.io/badge/Upstage-%23805CFB.svg?style=for-the-badge&logo=data:image/png;base64,...)
+
+### **Retrieval**
+- **MMR (Maximum Marginal Relevance)**  
+  ![MMR](https://img.shields.io/badge/MMR-%23007BFF.svg?style=for-the-badge&logo=MMR&logoColor=white)
+
+### 모델 테스트
+- **RAGAS**
+
+  ![RAGAS](https://img.shields.io/badge/RAGAS-%23F9C23C.svg?style=for-the-badge&logo=RAGAS&logoColor=white)
+
 
 ### 배포: AWS, Fly.io
-<img src="https://camo.githubusercontent.com/a8c9424c4c80c2c77f6c62ba94547494c0286073d63c138001e089dc907955c8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f636b65722d3234393645443f7374796c653d666f722d7468652d6261646765266c6f676f3d446f636b6572266c6f676f436f6c6f723d7768697465">
-
-![AWS 로고](https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png)
-![Fly.io 로고](https://fly.io/static/images/brand/logo-text-dark.svg)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Fly.io](https://img.shields.io/badge/Fly.io-24175B?style=for-the-badge&logo=flydotio&logoColor=white)
 
 ### GitHub에서 사용되는 도구들
-- **Git**: ![Git 로고](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png)
-- **Docker**: ![Docker 로고](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png)
-- **Kubernetes**: ![Kubernetes 로고](https://kubernetes.io/images/header.png)
+![Mattermost](https://img.shields.io/badge/Mattermost-0058CC?style=for-the-badge&logo=Mattermost&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-
-<img src="https://img.shields.io/badge/Mattermost-0058CC?style=for-the-badge&logo=Mattermost&logoColor=white" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
-<img src="https://camo.githubusercontent.com/0c43d19336fe5adc9b7a892ecb0152393d36a9512cb7da6d6529ae140aeb8334/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4749542d4630353033323f7374796c653d666f722d7468652d6261646765266c6f676f3d474954266c6f676f436f6c6f723d7768697465">
 
 # 기능
 
