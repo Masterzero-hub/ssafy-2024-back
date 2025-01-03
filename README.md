@@ -13,6 +13,8 @@
 ## 2. 최신 노트북 사용 설명 챗봇 소개  
 - **RAG (Retrieval-Augmented Generation)** 기반 챗봇 서비스 구현
 
+![플로우차트](images/플로우차트.png)
+
 ---
 
 ## 3. Task 유형 정의 / 주요 기능
