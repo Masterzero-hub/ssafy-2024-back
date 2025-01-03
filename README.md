@@ -33,6 +33,8 @@
 ---
 
 ## 4. 사용 툴
+## 아키텍처
+![아키텍처](images/Frame%201.png)
 
 ### 프론트엔드: Node.js  
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)  
@@ -66,7 +68,6 @@
   ![RAGAS](https://img.shields.io/badge/RAGAS-%23F9C23C.svg?style=for-the-badge&logo=RAGAS&logoColor=white)
 
 ### 배포: AWS, Fly.io  
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)  
 ![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)  
 ![Fly.io](https://img.shields.io/badge/Fly.io-24175B?style=for-the-badge&logo=flydotio&logoColor=white)
 
@@ -108,7 +109,7 @@
 
 
 ### [사용 화면]
-  ![사용방법](images/NoteBot 사용방법.jpg)
+  ![사용방법](images/NoteBot%20사용방법.jpg)
 
 
 [시연 연상]
