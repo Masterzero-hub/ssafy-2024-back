@@ -104,14 +104,93 @@ https://github.com/user-attachments/assets/9894beb4-9683-4cbd-8fc7-58743e17ae25
 
 ---
 
-## 7. 배포된 링크
+## 7. 요청 및 응답 형태
+
+### 7-1. 프론트 엔드 - 사용자 요청 Input
+
+payload에서 JSON의 `{ message: userMessage }` 형태로 전달하게 된다.
+
+```javascript
+async function getChatResponse(userMessage) {
+  const payload = { message: userMessage }; // 요청 데이터는 단순 문자열로 구성
+
+  const response = await fetch(`${BASE_URL}/chat`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload), // JSON 형식으로 전송
+  });
+
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+
+  const data = await response.json();
+  return data.reply;
+}
+```
+
+### 7-3. 백 엔드 - 챗봇 응답 Input 및 Output
+
+```python
+class MessageRequest(BaseModel):
+    message: str
+
+@app.post("/chat")
+async def chat_endpoint(req: MessageRequest):
+    """
+    Chat 엔드포인트: 사용자의 메시지를 받아 process_query를 호출하고 LLM 응답을 반환.
+
+    Parameters:
+        req (MessageRequest): 사용자의 메시지를 포함한 요청 객체.
+
+    Returns:
+        dict: 처리된 응답 메시지를 포함한 JSON 객체.
+    """
+    # Process the query through process_query function
+    response = process_query(req.message)
+    
+    if response is None:
+        print("제조사 식별 실패")
+        # 제조사 식별 실패 시, OpenAI의 답변으로 대체하고 경고 메시지를 추가
+        ai_response = openai.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": req.message},
+            ],
+        )
+        assistant_reply = ai_response.choices[0].message.content
+        # OpenAI 답변에 제조사 식별 실패 경고 메시지 추가
+        return {"reply": f"제조사 식별에 실패하여, OpenAI의 답변으로 대체되었으므로 오류가 있을 수 있습니다.\n\n{assistant_reply}"}
+    
+    # 정상적인 LLM 응답 처리
+    print("응답 완료")
+    return {"reply": response}
+```
+### 7-3. 모델링 코드
+
+- 메타데이터 정의
+![이미지](images/메타데이터%20정의.png)
+
+- vector DB에 제조사 데이터가 존재하는 경우 
+
+![이미지](images/제조사%20리트리버.png)
+![이미지](images/메타데이터%20리트리버.png)
+
+
+- 프롬프트
+![이미지](images/프롬프트.png)
+
+---
+
+## 8. 배포된 링크
 
 - **프론트**: [https://main.d23vfmqy5vhe9g.amplifyapp.com/](https://main.d23vfmqy5vhe9g.amplifyapp.com/)  
 - **백**: [https://ssafy-2024-back.fly.dev/](https://ssafy-2024-back.fly.dev/)
 
----
-
-## 8. 로컬 실행 방법
+## 9. 로컬 실행 방법
 
 ### 프론트엔드 서버 실행 방법
 
@@ -122,7 +201,6 @@ npm run build
 npm start
 ```
 
-
 ### 백엔드 서버 실행 방법
 
 ```bash
@@ -130,7 +208,8 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## 9. 참여자 및 역할
+
+## 10. 참여자 및 역할
 
 - **고대권**: PM(project Management) 및 AI 챗봇 기능 구현 (RAG/LLM)
 - **김근휘**: AI 챗봇 기능 구현(RAG/LLM) 및 테스트(RAGAS)

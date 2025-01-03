@@ -81,7 +81,7 @@ async def chat_endpoint(req: MessageRequest):
         return {"reply": f"제조사 식별에 실패하여, OpenAI의 답변으로 대체되었으므로 오류가 있을 수 있습니다.\n\n{assistant_reply}"}
     
     # 정상적인 LLM 응답 처리
-    print("응답 완료료")
+    print("응답 완료")
     return {"reply": response}
 
 if __name__ == "__main__":
