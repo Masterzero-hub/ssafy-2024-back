@@ -98,7 +98,7 @@
 ### [사용 화면]  
   ![사용방법](images/NoteBot%20사용방법.jpg)
 
-[시연 연상]
+### [시연 연상]
 
 https://github.com/user-attachments/assets/9894beb4-9683-4cbd-8fc7-58743e17ae25
 
